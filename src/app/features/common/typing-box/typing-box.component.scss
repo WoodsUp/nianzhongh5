@@ -1,0 +1,24 @@
+.typing-box {
+  padding: 1rem 1.2rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  white-space: pre-line;
+  background: rgba(0,5,10,0.8);
+  box-shadow: 2px 3px 8px rgba(0,5,10,0.8);
+  border: 1px solid #4a4b4c;
+
+  .flash {
+    font-weight: bold;
+    animation: _flash 1s linear 0.5s infinite;
+  }
+
+  @keyframes _flash {
+    0% { opacity: 1; }
+    40% { opacity: 1; }
+    60% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+}

@@ -1,0 +1,4 @@
+<div #boxRef class="typing-box animated" data-ani-name="fadeIn" data-ani-duration="0.5s"
+  (webkitAnimationEnd)="play()">
+  {{ showText }}<span *ngIf="nowLength !== totalLength" class="flash"> _</span>
+</div>

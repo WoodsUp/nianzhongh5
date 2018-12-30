@@ -1,0 +1,144 @@
+.section-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.section-loading {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2018;
+  text-align: center;
+  background: #fff;
+
+  .logo {
+    width: 40%;
+    margin-top: 8vh;
+  }
+
+  .title {
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    // font-weight: bold;
+    font-size: 1.5rem;
+    color: #333538;
+    text-align: center;
+  }
+
+  .combine {
+    position: absolute;
+    width: 18rem;
+    height: 14rem;
+    top: 26%;
+    left: 50%;
+    margin-left: -9rem;
+
+    .boat {
+      position: absolute;
+      width: 7rem;
+      bottom: 30%;
+      left: 50%;
+      margin-left: -3.5rem;
+      z-index: 3;
+
+      animation: _swing 3s ease-in-out 0s infinite alternate;
+    }
+    
+    .pool {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .water {
+      position: absolute;
+      left: -0.7rem;
+      bottom: 0;
+      width: 100%;
+      z-index: 2;
+    }
+  }
+
+  .loading-tips {
+    position: absolute;
+    bottom: 12%;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    // background-color: #ccc;
+
+    .loading-dots {
+      position: absolute;
+      left: 0;
+      right: 0;
+      // height: 1rem;
+
+      .dot {
+        display: inline-block;
+        width: 0.5rem;
+        height: 0.5rem;
+        background: #7d7e7f;
+        border-radius: 0.2rem;
+        border: 1px solid #777;
+        margin: 0 0.8rem;
+
+        &:nth-child(1) {
+          animation: _dot 1s linear 0s infinite;
+        }
+        &:nth-child(2) {
+          animation: _dot 1s linear 0.2s infinite;
+        }
+        &:nth-child(3) {
+          animation: _dot 1s linear 0.4s infinite;
+        }
+      }
+    }
+
+    .loading-text {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-top: 1.5rem;
+      color: #464748;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@keyframes _swing {
+  from {
+    transform-origin: 50% -200%;
+    transform: rotateZ(3deg);
+  }
+  to {
+    transform-origin: 50% -200%;
+    transform: rotateZ(-1deg);
+  }
+}
+
+@keyframes _dot {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  20% {
+    transform: scale3d(1, 1, 1);
+  }
+  40% {
+    transform: scale3d(0.5, 0.5, 1);
+  }
+  80% {
+    transform: scale3d(0.5, 0.5, 1);
+  }
+  100% {
+    transform: scale3d(0.5, 0.5, 1);
+  }
+}

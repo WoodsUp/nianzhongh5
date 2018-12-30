@@ -1,0 +1,44 @@
+<div class="section section-05">
+  <!-- 背景图层 -->
+  <img class="bg" [src]="imgUrl.background">
+  <!-- 云 -->
+  <img class="cloud animated" [src]="imgUrl.cloud"
+    data-ani-name="fadeInRight"
+    data-ani-duration="0.5s">
+  <!-- 太阳 -->
+  <img class="sun animated" [src]="imgUrl.sun"
+    data-ani-name="fadeInLeft"
+    data-ani-duration="0.5s"
+    data-ani-delay="0.2s">
+  <!-- 塔吊 -->
+  <div class="machine animated"
+    data-ani-name="bounceInDown"
+    data-ani-duration="0.5s"
+    data-ani-delay="0.5s">
+    <img class="machine-frame" [src]="imgUrl.machine">
+    <img class="machine-hook" [src]="imgUrl.machine_hook">
+  </div>
+  <!-- 房子 -->
+  <img class="building animated" [src]="imgUrl.building"
+    data-ani-name="bounceInDown"
+    data-ani-duration="0.5s">
+  <!-- 抓子 -->
+  <img class="hand animated" [src]="imgUrl.hand"
+    data-ani-name="rotateInDownLeft"
+    data-ani-duration="0.5s"
+    data-ani-delay="1s">
+  <!-- 卡车 -->
+  <img class="trunk animated" [src]="imgUrl.trunk"
+    data-ani-name="lightSpeedIn"
+    data-ani-duration="0.5s"
+    data-ani-delay="1.5s">
+  <!-- 路 -->
+  <img class="road" [src]="imgUrl.road">
+  <!-- 文案 -->
+  <typing-box class="text-wrapper text-wrapper-1"
+    [text]="'但你不曾停下！'">
+  </typing-box>
+  <typing-box class="text-wrapper text-wrapper-2"
+    [text]="'你和你的品牌都在咬牙努力！'">
+  </typing-box>
+</div>

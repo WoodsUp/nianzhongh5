@@ -1,0 +1,31 @@
+<div class="section section-01">
+  <!-- 背景图层 -->
+  <img class="bg" [src]="imgUrl.background">
+  <!-- 云层太阳 -->
+  <img class="cloud-1 animated" [src]="imgUrl.cloud"
+    data-ani-name="fadeInLeft"
+    data-ani-duration="1s">
+  <img class="cloud-2 animated" [src]="imgUrl.front_cloud"
+    data-ani-name="fadeInRight"
+    data-ani-duration="1s">
+  <img class="sun animated" [src]="imgUrl.sun"
+    data-ani-name="bounceInDown"
+    data-ani-duration="1s"
+    data-ani-delay="0.5s">
+  <!-- 商店 -->
+  <img class="store animated" [src]="imgUrl.store"
+    data-ani-name="zoomIn"
+    data-ani-duration="0.5s">
+  <!-- 路 -->
+  <img class="road animated" [src]="imgUrl.road"
+    data-ani-name="fadeIn"
+    data-ani-duration="1s"
+    data-ani-delay="0.5s">
+  <!-- 人 -->
+  <img class="man animated" [src]="imgUrl.man"
+    data-ani-name="rotateInUpLeft"
+    data-ani-duration="0.5s"
+    data-ani-delay="0.5s">
+  <!-- 文案 -->
+  <typing-box class="text-wrapper" [text]="'建材人，\n2018年，你还好吗？'" [ms]="150"></typing-box>
+</div>

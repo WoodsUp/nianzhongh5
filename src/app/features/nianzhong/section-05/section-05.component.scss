@@ -1,0 +1,95 @@
+.section-05 {
+  img {
+    position: absolute;
+  }
+
+  img.bg {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+  }
+
+  img.cloud {
+    width: 50%;
+    top: 2%;
+    left: -1rem;
+    z-index: 2;
+  }
+
+  img.sun {
+    width: 40%;
+    top: 3%;
+    right: 15%;
+    z-index: 1;
+  }
+
+  div.machine {
+    position: absolute;
+    width: 97%;
+    bottom: 42%;
+    left: 0;
+    z-index: 3;
+
+    img {
+      width: 100%;
+    }
+    .machine-frame {
+      position: relative;
+    }
+    .machine-hook {
+      left: 0;
+      top: 0;
+    }
+  }
+  img.machine-hook {
+    animation: _move 10s ease-in-out 1s infinite alternate;
+  }
+  @keyframes _move {
+    from { transform: translateX(-2rem); }
+    to { transform: translateX(2rem); }
+  }
+
+  img.building {
+    width: 45%;
+    bottom: 42%;
+    right: 20%;
+    z-index: 2
+  }
+
+  img.hand {
+    width: 20%;
+    bottom: 18%;
+    left: 22%;
+    z-index: 2
+  }
+
+  img.trunk {
+    width: 65%;
+    bottom: 3%;
+    right: 2%;
+    z-index: 2
+  }
+
+  img.road {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .text-wrapper {
+    position: absolute;
+    right: 3%;
+    z-index: 998;
+    width:75%;
+    text-align: right;
+  }
+
+  .text-wrapper-1 {
+    top: 23%;
+    width: 55%;
+  }
+  .text-wrapper-2 {
+    bottom: 23%;
+  }
+}

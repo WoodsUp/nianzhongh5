@@ -1,0 +1,100 @@
+.section-03 {
+  img {
+    position: absolute;
+  }
+
+  img.bg {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+  }
+
+  img.grid {
+    top: 5%;
+    right: 0;
+    width: 85%;
+    z-index: 0;
+  }
+
+  img.people {
+    top: 2%;
+    right: 10%;
+    width: 60%;
+    z-index: 1;
+  }
+
+  img.other {
+    top: 13%;
+    right: 8%;
+    width: 32%;
+    z-index: 2;
+  }
+
+  img.tips {
+    top: 35%;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  img.desk {
+    top: 55%;
+    right: 0;
+    width: 80%;
+    z-index: 5;
+  }
+
+  img.man {
+    top: 40%;
+    right: 44%;
+    width: 30%;
+    z-index: 4;
+  }
+
+  img.computer {
+    top: 56%;
+    right: 40%;
+    width: 36%;
+    z-index: 6;
+  }
+
+  img.light {
+    top: 38%;
+    right: 5%;
+    width: 60%;
+    z-index: 3; 
+  }
+
+  img.boat {
+    bottom: 2%;
+    left: 2%;
+    width: 30%;
+    z-index: 8;
+  }
+
+  img.road {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 7;
+  }
+
+  .text-wrapper {
+    position: absolute;
+    right: 3%;
+    z-index: 998;
+    width: 66%;
+    text-align: right;
+  }
+  .text-wrapper-1 {
+    top: 30%;
+  }
+  .text-wrapper-2 {
+    top: 70%;
+    width: 58%;
+  }
+  // .text-wrapper-3 {
+  //   bottom: 5%;
+  //   width: 50%;
+  // }
+}

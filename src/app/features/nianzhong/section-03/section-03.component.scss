@@ -1,0 +1,103 @@
+.section-03 {
+  img {
+    position: absolute;
+  }
+
+  img.bg {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+  }
+
+  img.city {
+    top: 11%;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  img.satellite {
+    top: 10%;
+    left: 33%;
+    width: 15%;
+    z-index: 3;
+  }
+
+  .combine {
+    position: absolute;
+    width: 18rem;
+    height: 14rem;
+    top: 35%;
+    left: -0.5rem;
+    z-index: 1;
+
+    .boat {
+      position: absolute;
+      width: 7rem;
+      bottom: 30%;
+      left: 50%;
+      margin-left: -3.5rem;
+      z-index: 3;
+
+      animation: _swing 3s ease-in-out 0s infinite alternate;
+    }
+    
+    .pool {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .water {
+      position: absolute;
+      left: -0.7rem;
+      bottom: 0;
+      width: 100%;
+      z-index: 2;
+    }
+  }
+
+  img.planet {
+    bottom: 12%;
+    left: 10%;
+    width: 45%;
+  }
+
+  img.moon {
+    bottom: 7%;
+    right: 25%;
+    width: 25%;
+  }
+
+  img.road {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+  }
+
+  .text-wrapper {
+    position: absolute;
+    right: 3%;
+    z-index: 998;
+    width: 70%;
+    text-align: right;
+  }
+  .text-wrapper-1 {
+    top: 10%;
+  }
+  .text-wrapper-2 {
+    top: 25%;
+    width: 50%;
+  }
+  .text-wrapper-3 {
+    bottom: 25%;
+    width: 55%;
+  }
+  .text-wrapper-4 {
+    bottom: 10%;
+    width: 45%;
+  }
+}

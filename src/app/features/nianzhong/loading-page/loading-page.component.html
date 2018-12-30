@@ -1,0 +1,17 @@
+<!-- 加载页 -->
+<div class="section section-loading" data-ani-name="fadeOut" data-ani-duration="0.5s">
+  <img class="logo" [src]="imgUrl.logo">
+  <div class="combine">
+    <img class="boat" [src]="imgUrl.boat">
+    <img class="pool" [src]="imgUrl.pool">
+    <img class="water" [src]="imgUrl.water">
+  </div>
+  <div class="loading-tips" data-ani-name="fadeIn" data-ani-duration="0.5" data-ani-delay="">
+    <div class="loading-dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <div class="loading-text">{{ loadingPercent === 100 ? '加载完成' : loadingPercent + '%' }}</div>
+  </div>
+</div>

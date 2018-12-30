@@ -1,0 +1,44 @@
+<div class="section section-03">
+  <!-- 背景图层 -->
+  <img class="bg" [src]="imgUrl.background">
+  <!-- 建筑物 -->
+  <img class="city animated" [src]="imgUrl.city"
+    data-ani-name="fadeInLeft"
+    data-ani-duration="0.5s">
+  <!-- 卫星 -->
+  <img class="satellite animated" [src]="imgUrl.satellite"
+    data-ani-name="fadeIn"
+    data-ani-duration="1s">
+  <!-- 船等 -->
+  <div class="combine animated"
+    data-ani-name="fadeInRight"
+    data-ani-duration="1s">
+    <img class="boat" [src]="imgUrl.boat">
+    <img class="pool" [src]="imgUrl.pool">
+    <img class="water" [src]="imgUrl.water">
+  </div>
+  <!-- 星球 -->
+  <img class="planet animated" [src]="imgUrl.planet"
+    data-ani-name="rotateInUpRight"
+    data-ani-duration="1s">
+  <!-- 月亮 -->
+  <img class="moon animated" [src]="imgUrl.moon"
+    data-ani-name="rotateInUpLeft"
+    data-ani-duration="1s">
+  <!-- 路 -->
+  <img class="road" [src]="imgUrl.road">
+  <!-- 文案 -->
+  <typing-box class="text-wrapper text-wrapper-1"
+    [text]="'这一年\n你不得不依靠更多的渠道'">
+  </typing-box>
+  <typing-box class="text-wrapper text-wrapper-2"
+    [text]="'接受更少的利润'">
+  </typing-box>
+
+  <typing-box class="text-wrapper text-wrapper-3"
+    [text]="'这一年\n迎来了市场的寒冬'">
+  </typing-box>
+  <typing-box class="text-wrapper text-wrapper-4"
+    [text]="'生意更加难做'">
+  </typing-box>
+</div>

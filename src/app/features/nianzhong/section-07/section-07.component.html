@@ -1,0 +1,42 @@
+<div class="section section-07">
+  <!-- 背景图层 -->
+  <img class="bg" [src]="imgUrl.background">
+  <!-- 胶片 -->
+  <img class="film-1 animated" [src]="imgUrl.film_1"
+    data-ani-name="fadeInUpBig"
+    data-ani-duration="2s"
+    data-ani-delay="0s">
+  <img class="film-2 animated" [src]="imgUrl.film_2"
+    data-ani-name="fadeInUpBig"
+    data-ani-duration="2s"
+    data-ani-delay="1s">
+  <!-- 星球 -->
+  <img class="planet animated" [src]="imgUrl.planet"
+    data-ani-name="bounceIn"
+    data-ani-duration="0.5s"
+    data-ani-delay="1.2s">
+  <!-- 卫星 -->
+  <img class="satellite animated" [src]="imgUrl.satellite"
+    data-ani-name="bounceIn"
+    data-ani-duration="0.5s"
+    data-ani-delay="1.5s">
+  <!-- 人 -->
+  <img class="people animated" [src]="imgUrl.people"
+    data-ani-name="bounceInUp"
+    data-ani-duration="1s">
+  <!-- 文案 -->
+  <typing-box class="text-wrapper text-wrapper-1"
+    [text]="'你还在坚持，做着你最擅长的事'"
+    [ms]="100">
+  </typing-box>
+  <div class="effect" #entry>
+    <div class="text animated" #text data-ani-name="zoomInDown"
+      data-ani-duration="1s" data-ani-delay="1s">
+      帮助人们共造新家！
+      <div #tips class="tips">
+        <span class="tips-flash">
+          轻触屏幕开启您的 VR 账单</span>
+      </div>
+    </div>
+  </div>
+</div>

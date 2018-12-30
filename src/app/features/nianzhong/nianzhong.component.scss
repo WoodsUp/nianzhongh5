@@ -1,0 +1,11 @@
+.section-08 {
+  img {
+    position: absolute;
+  }
+
+  img.bg {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+  }
+}

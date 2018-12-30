@@ -1,0 +1,101 @@
+<div class="share-page">
+  <!-- 登陆页 -->
+  <div class="login" data-ani-name="bounceOutUp" data-ani-duration="1.5s">
+    <img class="logo" [src]="imgUrl.logo">
+    <form class="login-form">
+      <label class="login-1" [ngClass]="accountError ? 'error' : ''">
+        <input type="text" name="account" placeholder="请输入账号" [(ngModel)]="account" required>
+        <i class="icon icon-account"></i>
+      </label>
+      <label class="login-2" [ngClass]="passwordError ? 'error' : ''">
+        <input type="password" name="password" placeholder="请输入密码" [(ngModel)]="password" required>
+        <i class="icon icon-password"></i>
+      </label>
+      <div class="err-msg" [ngClass]="accountError || passwordError ? 'error' : ''">
+        {{ errMsg }}
+      </div>
+      <div class="login-btn">
+        <input type="button" value="登 &nbsp;&nbsp; 录" (click)="login()">
+      </div>
+      <div class="pic">
+        
+        <a href="/nianzhong"><img #backH5 [src]="imgUrl.boat"></a>
+        <p>点击小船 再看一遍</p>
+      </div>
+    </form>
+  </div>
+  <!-- 背景图层 -->
+  <img class="bg" [src]="imgUrl.background">
+  <!-- 胶片 -->
+  <img class="film-1 animated" [src]="imgUrl.film_1"
+    data-ani-name="rotateInDownLeft"
+    data-ani-duration="1s">
+  <img class="film-2 animated" [src]="imgUrl.film_2"
+    data-ani-name="rotateInDownRight"
+    data-ani-duration="1s"
+    data-ani-delay="0.3s">
+  <!-- 太阳 -->
+  <img class="sun animated" [src]="imgUrl.sun"
+    data-ani-name="bounceIn"
+    data-ani-duration="0.5s"
+    data-ani-delay="1.2s">
+  <!-- 卫星 -->
+  <img class="satellite animated" [src]="imgUrl.satellite"
+    data-ani-name="fadeIn"
+    data-ani-duration="0.5s"
+    data-ani-delay="1.5s">
+  <!-- 女孩纸 -->
+  <img class="girl animated" [src]="imgUrl.girl"
+    data-ani-name="fadeIn"
+    data-ani-duration="0.5s">
+  <!-- 数据展示 -->
+  <div class="data-wrapper">
+    <!-- 纸 -->
+    <img class="cover animated" [src]="imgUrl.mail_cover"
+      data-ani-name="fadeInUp"
+      data-ani-duration="0.5s"
+      data-ani-delay="0.9s">
+    <img class="rect animated" [src]="imgUrl.mail_rect"
+      data-ani-name="fadeInLeft"
+      data-ani-duration="0.5s"
+      data-ani-delay="0.6s">
+    <img class="paper animated" [src]="imgUrl.mail_paper"
+      data-ani-name="fadeInRight"
+      data-ani-duration="0.5s"
+      data-ani-delay="0.3s">
+    <!-- 数据 -->
+    <div class="data">
+      <h2 class="animated" data-ani-name="fadeInDown" data-ani-duration="0.3s" data-ani-delay="1.2s">
+        2018 VR账本
+      </h2>
+      <p class="animated" data-ani-name="fadeInDown" data-ani-duration="0.3s" data-ani-delay="1.3s">
+        在 <strong class="hl">{{ createTimeParse.year }}年{{ createTimeParse.month }}月{{ createTimeParse.date }}日</strong>，您第一次登录了<strong>云深VR选购平台</strong>
+      </p>
+      <p class="animated" data-ani-name="fadeInDown" data-ani-duration="0.3s" data-ani-delay="1.4s">
+        您最早 <strong class="hl">{{ data.startTime }}点</strong> 就开始工作，最晚工作到 <strong class="hl">{{ data.endTime }}点</strong>
+      </p>
+      <p class="animated" data-ani-name="fadeInDown" data-ani-duration="0.3s" data-ani-delay="1.5s">
+        这一年，您收藏了 <strong class="hl">{{ data.collectionCount }}</strong> 张效果图
+      </p>
+      <p class="animated" data-ani-name="fadeInDown" data-ani-duration="0.3s" data-ani-delay="1.6s">
+        与 <strong class="hl">{{ data.shareCount }}</strong> 位朋友分享了产品
+      </p>
+      <p class="animated" data-ani-name="fadeInDown" data-ani-duration="0.3s" data-ani-delay="1.7s">
+        您的爆款的产品是 <strong class="hl">{{ data.product.name }}</strong>，一共有 <strong class="hl">{{ data.productCount }}</strong> 人查看了这个产品
+      </p>
+      <p class="animated" data-ani-name="fadeInDown" data-ani-duration="0.3s" data-ani-delay="1.8s">
+        您客户最喜欢的场景是 <strong class="hl">{{ data.scene.name }}</strong>，观看量竟高达 <strong class="hl">{{ data.sceneCount }}</strong> 次
+      </p>
+    </div>
+    <img class="demention animated" [src]="imgUrl.demention"
+      data-ani-name="rollIn"
+      data-ani-duration="1s"
+      data-ani-delay="3s">
+
+    <button class="share-btn animated" (click)="toggleMask()"
+      data-ani-name="bounceIn" data-ani-duration="0.5s" data-ani-delay="4s">分享</button>
+  </div>
+
+  <img class="mask" *ngIf="showMask" [src]="imgUrl.mask" (click)="toggleMask()">
+
+</div>

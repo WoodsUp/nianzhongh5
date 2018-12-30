@@ -1,0 +1,105 @@
+.section-06 {
+  img {
+    position: absolute;
+  }
+
+  img.bg {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+  }
+
+  img.road {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+  }
+
+  img.light {
+    width: 20%;
+    z-index: 2;
+  }
+  img.light-1 {
+    top: 2%;
+    right: 5%;
+  }
+  img.light-2 {
+    top: 40%;
+    left: 25%;
+  }
+
+  img.chest-1 {
+    width: 15%;
+    top: 5%;
+    left: 40%;
+    z-index: 1;
+  }
+
+  img.chest-2 {
+    width: 45%;
+    top: 63%;
+    left: 25%;
+    z-index: 1;
+  }
+
+  img.seat {
+    width: 35%;
+    top: 18%;
+    right: 5%;
+    z-index: 2;
+  }
+
+  img.clock {
+    width: 15%;
+    top: 55%;
+    right: 30%;
+    z-index: 1;
+  }
+
+  img.kitchen {
+    width: 75%;
+    bottom: 12%;
+    left: 1%;
+    z-index: 2;
+  }
+
+  img.rect {
+    width: 90%;
+    bottom: 10%;
+    right: 0;
+    z-index: 1;
+  }
+
+  img.bag {
+    width: 15%;
+    bottom: 10%;
+    right: 10%;
+    z-index: 2;
+  }
+
+  img.dog {
+    width: 18%;
+    bottom: 8%;
+    right: 24%;
+    z-index: 3;
+  }
+
+  .text-wrapper {
+    position: absolute;
+    right: 3%;
+    z-index: 998;
+    width: 70%;
+    text-align: right;
+  }
+  .text-wrapper-1 {
+    top: 7%;
+  }
+  .text-wrapper-2 {
+    top: 45%;
+  }
+  .text-wrapper-3 {
+    top: 80%;
+    width: 80%;
+  }
+}
