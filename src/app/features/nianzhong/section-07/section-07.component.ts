@@ -33,7 +33,7 @@ export class Section07Component implements AfterViewInit {
     }, false);
 
     this.entryEl.nativeElement.addEventListener('click', () => {
-      this.router.navigate(['/nianzhong/share']);
+      this.router.navigate(['/share']);
     }, false);
   }
 

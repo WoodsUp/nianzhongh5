@@ -76,9 +76,13 @@ export class SharePageComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.wxShare.setWxShare({
-      title: '您的 2018 VR 账单',
-      desc: '有一份您的VR账单等待签收',
-      imgUrl: '',
+      title: '收官! 查看你的年度VR零售全景图',
+      desc: '2018，面对重重压力，你披荆斩棘，2019，你将继续蜕变，为更多的人铸梦空间',
+      imgUrl: 'http://resources.wecareroom.com/assets/nianzhong/wx-share.jpg',
+
+      titleMoments: '收官! 查看你的年度VR零售全景图',
+      descMoments: '2018，面对重重压力，你披荆斩棘，2019，你将继续蜕变，为更多的人铸梦空间',
+      imgUrlMoments: 'http://resources.wecareroom.com/assets/nianzhong/wx-share.jpg',
     });
   }
 

@@ -1,11 +1,27 @@
-.section-08 {
-  img {
-    position: absolute;
-  }
+.music-player {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 31px;
+  height: 31px;
+  z-index: 10;
+  
+  .icon {
+    animation: _around 6s linear infinite both;
+    border: 2px solid #fff;
+    padding: 3px;
+    border-radius: 50%;
 
-  img.bg {
-    position: relative;
-    width: 100%;
-    z-index: 0;
+    &.pause {
+      animation: none;
+      opacity: 0.5;
+    }
+  }
+}
+
+.h5-container {
+  @keyframes _around {
+    from { transform: rotateZ(0); }
+    to { transform: rotateZ(360deg); }
   }
 }

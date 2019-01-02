@@ -14,7 +14,7 @@ export class HttpService {
   };
 
   private DEV_URL = 'https://vr.forwoodsup.cn/';
-  private PC_URL = 'https://vr5.wecareroom.com/';
+  private PC_URL = 'http://zxxtest.wecareroom.com/';
 
   constructor(
     private http: HttpClient,

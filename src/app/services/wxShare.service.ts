@@ -3,9 +3,14 @@ import { WxWebService } from './wx.web.service';
 import { Sha1 } from './sha1';
 
 interface WxConfigData {
+  // 分享给朋友
   title: string;
   desc: string;
   imgUrl: string;
+  // 分享到朋友圈
+  titleMoments: string;
+  descMoments: string;
+  imgUrlMoments: string;
 }
 
 @Injectable()
@@ -50,10 +55,10 @@ export class WxShareService {
           wx.ready(() => {
             // 朋友圈
             wx.onMenuShareTimeline({
-              title: config.title, // 分享标题
+              title: config.titleMoments, // 分享标题
               link: shareLink, // 分享链接
-              desc: config.desc, // 分享描述
-              imgUrl: config.imgUrl, // 分享图标
+              desc: config.descMoments, // 分享描述
+              imgUrl: config.imgUrlMoments, // 分享图标
               success: () => {},
               cancel: () => {}
             });

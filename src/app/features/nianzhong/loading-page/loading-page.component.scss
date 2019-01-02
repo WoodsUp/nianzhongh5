@@ -1,18 +1,10 @@
-.section-wrapper {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
 .section-loading {
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
   z-index: 2018;
+  width: 100vw;
+  height: 100vh;
   text-align: center;
   background: #fff;
 

@@ -7,11 +7,11 @@ import { SharePageComponent } from './features/nianzhong/share-page/share-page.c
 
 export const routes: Routes = [
   {
-    path: 'nianzhong',
+    path: 'test',
     component: NianZhongComponent,
   },
   {
-    path: 'nianzhong/share',
+    path: 'share',
     component: SharePageComponent,
   },
   {
