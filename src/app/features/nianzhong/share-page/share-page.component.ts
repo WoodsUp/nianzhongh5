@@ -79,10 +79,12 @@ export class SharePageComponent implements OnInit, AfterViewInit {
       title: '收官! 查看你的年度VR零售全景图',
       desc: '2018，面对重重压力，你披荆斩棘，2019，你将继续蜕变，为更多的人铸梦空间',
       imgUrl: 'http://resources.wecareroom.com/assets/nianzhong/wx-share.jpg',
+      link: 'http://zxxtest.wecareroom.com/test',
 
       titleMoments: '收官! 查看你的年度VR零售全景图',
       descMoments: '2018，面对重重压力，你披荆斩棘，2019，你将继续蜕变，为更多的人铸梦空间',
       imgUrlMoments: 'http://resources.wecareroom.com/assets/nianzhong/wx-share.jpg',
+      linkMoments: 'http://zxxtest.wecareroom.com/test',
     });
   }
 

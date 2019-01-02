@@ -29,6 +29,19 @@ export class NianZhongComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.toggleMusic(true);
 
+    const wx = (window as any).wx;
+    if (wx.invoke) {
+      wx.invoke('getNetworkType', {}, () => {
+        this.toggleMusic(true);
+      }, false);
+    } else {
+      wx.ready(() => {
+        wx.invoke('getNetworkType', {}, () => {
+          this.toggleMusic(true);
+        }, false);
+      });
+    }
+
     const _animation = this.animation;
     // 滚动
     const scroller = document.body.querySelector('.h5-container');

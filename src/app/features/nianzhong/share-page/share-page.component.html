@@ -1,7 +1,13 @@
 <div class="share-page">
   <!-- 登陆页 -->
   <div class="login" data-ani-name="bounceOutUp" data-ani-duration="1.5s">
-    <img class="logo" [src]="imgUrl.logo">
+    <a class="back-btn" href="/test">
+      <svg t="1546428139282" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3444" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"><defs><style type="text/css"></style></defs><path d="M512 1024c-281.6 0-512-230.4-512-512s230.4-512 512-512 512 230.4 512 512-230.4 512-512 512z m0-960c-249.6 0-448 198.4-448 448s198.4 448 448 448 448-198.4 448-448-198.4-448-448-448z" fill="#707070" p-id="3445"></path><path d="M889.6 524.8c-6.4 0-12.8-6.4-12.8-12.8 0-166.4-108.8-307.2-268.8-352-6.4 0-12.8-12.8-12.8-19.2 0-6.4 12.8-12.8 19.2-12.8 172.8 44.8 294.4 204.8 294.4 384 0 6.4-6.4 12.8-19.2 12.8zM531.2 147.2h-19.2c-6.4 0-12.8-6.4-12.8-12.8s6.4-12.8 12.8-12.8h19.2c6.4 0 12.8 6.4 12.8 19.2 6.4 0 0 6.4-12.8 6.4zM428.8 652.8c-6.4 0-19.2 0-25.6-6.4l-166.4-102.4c-12.8-6.4-19.2-19.2-19.2-32s6.4-25.6 25.6-38.4l166.4-102.4c6.4-6.4 25.6-6.4 32-6.4 25.6 0 44.8 19.2 44.8 38.4v204.8c0 12.8-12.8 25.6-19.2 32-12.8 12.8-25.6 12.8-38.4 12.8z m6.4-256h-12.8l-166.4 102.4-6.4 6.4s0 6.4 6.4 6.4l166.4 102.4H441.6l6.4-6.4v-204.8l-12.8-6.4z" fill="#707070" p-id="3446"></path><path d="M665.6 652.8c-6.4 0-12.8 0-25.6-6.4l-160-102.4c-12.8-6.4-19.2-19.2-19.2-32s6.4-25.6 25.6-32l166.4-102.4c32-19.2 64 0 64 32v204.8c0 12.8-6.4 19.2-12.8 32-12.8 6.4-25.6 6.4-38.4 6.4z m6.4-256h-12.8l-160 102.4-6.4 6.4s0 6.4 6.4 6.4l160 102.4h12.8l6.4-6.4v-204.8c6.4 0 0-6.4-6.4-6.4z" fill="#707070" p-id="3447"></path></svg>
+      <div class="back-tips">再看一次</div>
+    </a>
+    <a class="logo" href="http://www.wecareroom.com/index">
+      <img [src]="imgUrl.logo">
+    </a>
     <form class="login-form">
       <label class="login-1" [ngClass]="accountError ? 'error' : ''">
         <input type="text" name="account" placeholder="请输入账号" [(ngModel)]="account" required>
@@ -18,9 +24,16 @@
         <input type="button" value="登 &nbsp;&nbsp; 录" (click)="login()">
       </div>
       <div class="pic">
-        
-        <a href="/test"><img #backH5 [src]="imgUrl.boat"></a>
-        <p>点击小船 再看一遍</p>
+        <!-- 官网 -->
+        <div class="kf">
+          <div>联系我们</div>
+          <img [src]="imgUrl.kf">
+        </div>
+        <!-- 公众号 -->
+        <div class="gzh">
+          <div>公众号</div>
+          <img [src]="imgUrl.gzh">
+        </div>
       </div>
     </form>
   </div>

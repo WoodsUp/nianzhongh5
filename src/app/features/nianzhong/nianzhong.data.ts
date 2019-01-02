@@ -109,7 +109,8 @@ export const SECTION_08_IMAGE_URL = {
   satellite: BASE_URL + 'section08/satellite.png',
   demention: BASE_URL + 'section08/demention.png',
   mask: BASE_URL + 'section08/mask.png',
+  kf: BASE_URL + 'section08/kf.jpg',
+  gzh: BASE_URL + 'section08/gzh.jpg',
   sun: BASE_URL + 'common/sun.png',
   logo: BASE_URL + 'common/logo.png',
-  boat: BASE_URL + 'common/boat.png',
 };

@@ -152,12 +152,36 @@
     height: 200vh;
     background: #fff;
     text-align: center;
+
+    .back-btn {
+      display: inline-block;
+      position: absolute;
+      top: 103vh;
+      right: 1rem;
+      animation: _show 2s linear infinite alternate;
+      text-decoration: none;
+
+      .back-tips {
+        color: #666;
+        font-size: 12px;
+        padding: 3px 0;
+      }
+    }
+
+    @keyframes _show {
+      from { opacity: 1; }
+      to { opacity: 0.5; }
+    }
   
     .logo {
+      display: block;
       position: absolute;
       top: 110vh;
       left: 30vw;
       width: 40vw;
+      img {
+        position: static;
+      }
     }
   
     .login-form {
@@ -256,28 +280,28 @@
       }
 
       .pic {
-        text-align: center;
-        a {
+        margin-top: 3.5rem;
+
+        .kf,
+        .gzh {
           display: inline-block;
-          position: absolute;
-          height: 30vw;
-          width: 30vw;
-          margin-top: 10vh;
-          margin-left: -15vw;
-        }
+          width: 50%;
+          text-align: center;
+          box-sizing: border-box;
 
-        p {
-          padding: 1rem 0;
-          font-size: 0.75rem;
-          color: #888;
-        }
+          img {
+            position: static;
+            width: 25vw;
+            height: 25vw;
+          }
 
-        img {
-          position: absolute;
-          left: 0;
-          right: 0;
-          width: 100%;
-          height: 100%;
+          div {
+            color: #666;
+            margin-bottom: 0.25rem;
+          }
+        }
+        .kf {
+          border-right: 1px solid #eee;
         }
       }
     }

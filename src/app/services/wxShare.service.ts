@@ -7,10 +7,12 @@ interface WxConfigData {
   title: string;
   desc: string;
   imgUrl: string;
+  link: string;
   // 分享到朋友圈
   titleMoments: string;
   descMoments: string;
   imgUrlMoments: string;
+  linkMoments: string;
 }
 
 @Injectable()
@@ -56,7 +58,7 @@ export class WxShareService {
             // 朋友圈
             wx.onMenuShareTimeline({
               title: config.titleMoments, // 分享标题
-              link: shareLink, // 分享链接
+              link: config.linkMoments, // 分享链接
               desc: config.descMoments, // 分享描述
               imgUrl: config.imgUrlMoments, // 分享图标
               success: () => {},
@@ -66,7 +68,7 @@ export class WxShareService {
               // 微信群
               title: config.title,
               desc: config.desc,
-              link: shareLink,
+              link: config.link,
               imgUrl: config.imgUrl,
               type: '', // 分享类型,music、video或link，不填默认为link
               dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
