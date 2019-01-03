@@ -6,8 +6,6 @@ export class AnimationService {
   public DEVICE_H;
   public scrollDown = true;
 
-  private saving = false;  // 滚动节流
-
   constructor() {
   }
 
@@ -30,14 +28,6 @@ export class AnimationService {
         'animation-delay': aniDelay,
         '-webkit-animation-delay': aniDelay
       });
-    });
-
-    $(document).on('scroll', () => {
-      if (!this.saving) {
-        this.saving = true;
-        setTimeout(() => { this.saving = false; }, 100);
-        this.play();
-      }
     });
   }
 

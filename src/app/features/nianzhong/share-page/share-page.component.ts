@@ -128,7 +128,6 @@ export class SharePageComponent implements OnInit, AfterViewInit {
   }
 
   login() {
-    // this.closeLogin(); return;
     this.pass = !!this.account && !!this.password;
     // 验证信息是否为空
     if (!this.account) {
@@ -180,6 +179,7 @@ export class SharePageComponent implements OnInit, AfterViewInit {
   }
 
   closeLogin() {
+    this.animation.clearAnimation();
     this.fadeOut('.login', () => {
       this.animation.play();
     });

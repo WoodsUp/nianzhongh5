@@ -1,4 +1,7 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, AfterViewChecked } from '@angular/core';
+import * as $ from 'jquery';
+import * as AlloyTouch from 'alloytouch';
+import * as Transform from 'css3transform/dist/css3transform.js';
 
 import { LOADING_IMAGE_URL } from '../nianzhong.data';
 import { AnimationService } from '../../../services/animation.service';
@@ -29,6 +32,7 @@ export class LoadingPageComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
+    // 加载页面
     this.wxShare.setWxShare({
       title: '收官! 查看你的年度VR零售全景图',
       desc: '2018，面对重重压力，你披荆斩棘，2019，你将继续蜕变，为更多的人铸梦空间',
@@ -42,6 +46,8 @@ export class LoadingPageComponent implements AfterViewInit {
     });
 
     document.body.style.overflow = 'hidden';
+    // 禁止触摸事件
+    document.body.addEventListener('touchmove', this.lockTouch);
     // 计算图片总数
     this.imageElements = document.getElementsByTagName('img');
     this.imgCount = this.imageElements.length;
@@ -55,26 +61,40 @@ export class LoadingPageComponent implements AfterViewInit {
       el.onload = () => {
         this.alreadyLoaded++;
         this.loadingPercent = Math.round((this.alreadyLoaded / this.imgCount) * 100);
-        if (this.alreadyLoaded >= this.imgCount) {
-          // 关闭加载页面
-          if (document.readyState === 'complete') {
-            setTimeout(this.closeLoading.bind(this), 500);
-          } else {
-            document.onreadystatechange = () => {
-              if (document.readyState === 'complete') {
-                setTimeout(this.closeLoading.bind(this), 500);
-              }
-            };
-          }
-        }
       };
     }
+    // 关闭加载页面
+    window.addEventListener('load', () => {
+      setTimeout(this.closeLoading.bind(this), 500);
+    });
   }
 
   closeLoading() {
     this.fadeOut('.section-loading', () => {
-      // document.body.style.overflow = 'auto';
-      this.animation.play();
+      document.removeEventListener('touchmove', this.lockTouch);
+      const _animation = this.animation;
+      _animation.play();
+      // 滚动
+      const scroller = document.body.querySelector('.h5-container');
+      Transform(scroller);
+
+      const scrollerWrapper =  new AlloyTouch({
+        touch: scroller,
+        target: scroller,
+        property: 'translateY',
+        max: 0,
+        min: window.innerHeight - $('.h5-container').height(),
+        moveFactor: 0.3,
+        maxSpeed: 0.8,
+        factor: 0.3,
+        step: 1,
+        bindSelf: false,
+        change() {
+          _animation.play();
+        },
+      });
+
+      scrollerWrapper.to(window.innerHeight - $('.h5-container').height(), 120000, x => x);
     });
   }
 
@@ -92,5 +112,13 @@ export class LoadingPageComponent implements AfterViewInit {
       }
     }, false);
     this.animation.doAnimation(el);
+  }
+
+  private lockTouch(e) {
+    e.preventDefault();
+    e.returnValue = false;
+    e.stopPropagation();
+    e.cancelBubble = true;
+    return false;
   }
 }
